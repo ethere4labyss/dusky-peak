@@ -1,0 +1,7 @@
+baseURL = 'http://example.org/'
+languageCode = 'cs-CZ'
+title = 'Dusky Peak'
+
+[params]
+titlePrefix = "Dusky Peak | "
+copyright = "Copyright © 2023 Dusky Peak"
