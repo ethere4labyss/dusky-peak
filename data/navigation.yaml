@@ -1,0 +1,13 @@
+main:
+  - name: "Home"
+    link: "/"
+  - name: "C"
+    link: "/c"
+  - name: "Python"
+    link: "/python"
+  - name: "OpenGL"
+    link: "/opengl"
+  - name: "Rust"
+    link: "/rust"
+  - name: "Matematika"
+    link: "/matematika"
