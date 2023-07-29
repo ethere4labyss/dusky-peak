@@ -1,4 +1,4 @@
 ---
-title: "Úvod"
-author: "Admin"
+title: "Matematika"
+layout: "list"
 ---
