@@ -1,4 +1,19 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  {{ if eq .Section "c" }}
+    <h1>C - {{ .Title }}</h1>
+  {{ else if eq .Section "python" }}
+    <h1>Python - {{ .Title }}</h1>
+  {{ else if eq .Section "opengl" }}
+    <h1>OpenGL - {{ .Title }}</h1>
+  {{ else if eq .Section "maths" }}
+    <h1>Maths - {{ .Title }}</h1>
+  {{ else if eq .Section "rust" }}
+    <h1>Rust - {{ .Title }}</h1>
+  {{ else }}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
+  {{ if .Params.author }}
+    <h4>By {{ .Params.author }}</h4>
+  {{ end }}
   {{ .Content }}
 {{ end }}

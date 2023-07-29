@@ -1,4 +1,0 @@
----
-title: "Matematika"
-layout: "list"
----
