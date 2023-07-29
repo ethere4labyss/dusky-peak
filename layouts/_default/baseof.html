@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>{{ .Site.Params.titlePrefix }}{{ .Page.Title }}</title>
+    {{ $style := resources.Get "styles/main.scss" | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
     <div class="content-wrapper">
