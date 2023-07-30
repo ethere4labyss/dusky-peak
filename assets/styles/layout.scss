@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 .page-footer {
   margin-top: auto;
 }
@@ -11,8 +13,14 @@
 
 .blog-wrapper {
   display: flex;
-  gap: 4.8rem;
+  flex-direction: column;
+  gap: 2.4rem;
   width: 100%;
+
+  @include md {
+    flex-direction: row;
+    gap: 4.8rem;
+  }
 
   .page-aside {
     width: 100%;
