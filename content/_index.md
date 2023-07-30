@@ -1,4 +1,4 @@
 ---
 title: "Domů"
-layout: "single"
+layout: "index"
 ---

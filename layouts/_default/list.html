@@ -1,9 +1,11 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
-  {{ .Content }}
+  <main>
+    <h1>{{ .Title }}</h1>
+    <ul>
+      {{ range $index, $page := .Pages }}
+        <li><a href="{{ .Permalink }}">{{ add $index 1 }}. {{ $page.Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ .Content }}
+  </main>
 {{ end }}

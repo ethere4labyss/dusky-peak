@@ -1,4 +1,23 @@
-<footer>
-  <hr>
-  <p>{{ .Site.Params.copyright }}</p>
+<footer class="page-footer">
+  <div class="content-wrapper">
+    <p class="page-footer__copyright">{{ .Site.Params.copyright }} 🇨🇿 | {{ .Site.Params.maintainer }}</p>
+    <ul class="page-footer__links">
+      <li class="page-footer__link">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/ethere4labyss/dusky-peak/"
+        >
+          <i class="fa-solid fa-link"></i>
+          <span>Repozitář</span>
+        </a>
+      </li>
+      <li class="page-footer__link">
+        <a href="/">Přispět</a>
+      </li>
+      <li class="page-footer__link">
+        <a href="/">Odkaz</a>
+      </li>
+    </ul>
+  </div>
 </footer>

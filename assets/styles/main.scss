@@ -1,22 +1,25 @@
 @import 'reset';
+@import 'breakpoints';
+@import 'layout';
+@import 'colors';
+@import 'partials';
 
 html {
   font-size: 56.25%;
 }
 
-@media (min-width: 768px) {
+@include sm {
   html {
     font-size: 62.5%;
   }
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  background-color: $page-background;
+  color: $text-color;
+  min-height: 100vh;
   font-size: 1.5rem;
-}
-
-.content-wrapper {
-  margin: 0 auto;
-  padding: 0 2.4rem;
-  width: 100%;
-  max-width: 144rem;
+  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }

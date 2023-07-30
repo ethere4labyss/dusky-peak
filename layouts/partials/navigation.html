@@ -1,9 +1,19 @@
-<nav>
-  <i class="fa-solid fa-gear"></i>
-  <h2>Navigace</h2>
-  <ul>
-    {{ range .Site.Data.navigation.main }}
-      <li><a href="{{ .link }}">{{ .name }}</a></li>
-    {{ end }}
-  </ul>
+<nav class="page-navigation">
+  <div class="content-wrapper">
+    <a href="/" class="page-navigation__branding">
+      <img class="page-navigation__logo" src="/logo.png" alt="Dusky Peak Logo">
+      <h2 class="page-navigation__title">Dusky Peak</h2>
+    </a>
+    <input type="checkbox" id="navigation-toggle">
+    <label class="page-navigation__hider" for="navigation-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <ul class="page-navigation__items">
+      {{ range .Site.Data.navigation.main }}
+        <li class="page-navigation__item{{ if or (eq $.Page.RelPermalink .link) (and (strings.HasPrefix $.Page.RelPermalink .link) (not (eq .link "/"))) }} page-navigation__item--active{{ end }}">
+          <a href="{{ .link }}">{{ .name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 </nav>
