@@ -19,11 +19,11 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
   </head>
   <body>
+    {{ partial "navigation.html" . }}
     <div class="content-wrapper">
-      {{ partial "navigation.html" . }}
       {{ block "main" . }}
       {{ end }}
-      {{ partial "footer.html" . }}
     </div>
+    {{ partial "footer.html" . }}
   </body>
 </html>

@@ -1,9 +1,11 @@
-<nav>
-  <i class="fa-solid fa-gear"></i>
-  <h2>Navigace</h2>
-  <ul>
-    {{ range .Site.Data.navigation.main }}
-      <li><a href="{{ .link }}">{{ .name }}</a></li>
-    {{ end }}
-  </ul>
+<nav class="page-navigation">
+  <div class="content-wrapper">
+    <i class="fa-solid fa-gear"></i>
+    <h2>Navigace</h2>
+    <ul>
+      {{ range .Site.Data.navigation.main }}
+        <li><a href="{{ .link }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+    </div>
 </nav>
