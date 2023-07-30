@@ -1,19 +1,42 @@
 {{ define "main" }}
-  {{ if eq .Section "c" }}
-    <h1>C - {{ .Title }}</h1>
-  {{ else if eq .Section "python" }}
-    <h1>Python - {{ .Title }}</h1>
-  {{ else if eq .Section "opengl" }}
-    <h1>OpenGL - {{ .Title }}</h1>
-  {{ else if eq .Section "matematika" }}
-    <h1>Matematika - {{ .Title }}</h1>
-  {{ else if eq .Section "rust" }}
-    <h1>Rust - {{ .Title }}</h1>
-  {{ else }}
-    <h1>{{ .Title }}</h1>
-  {{ end }}
-  {{ if .Params.author }}
-    <h4>By {{ .Params.author }}</h4>
-  {{ end }}
-  {{ .Content }}
+  <aside class="page-aside">
+    {{ if eq .Section "c" }}
+      <h3 class="page-aside__title">C</h3>
+    {{ else if eq .Section "python" }}
+      <h3 class="page-aside__title">Python</h3>
+    {{ else if eq .Section "opengl" }}
+      <h3 class="page-aside__title">OpenGL</h3>
+    {{ else if eq .Section "matematika" }}
+      <h3 class="page-aside__title">Matematika</h3>
+    {{ else if eq .Section "rust" }}
+      <h3 class="page-aside__title">Rust</h3>
+    {{ else }}
+      <h3 class="page-aside__title">{{ .Title }}</h3>
+    {{ end }}
+    {{ $section := site.GetPage .Section }}
+    <ul>
+      {{ range $index, $page := $section.RegularPagesRecursive }}
+        <li><a href="{{ $page.Permalink }}">{{ add $index 1 }}. {{ $page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  </aside>
+  <main>
+    {{ if eq .Section "c" }}
+      <h1>C - {{ .Title }}</h1>
+    {{ else if eq .Section "python" }}
+      <h1>Python - {{ .Title }}</h1>
+    {{ else if eq .Section "opengl" }}
+      <h1>OpenGL - {{ .Title }}</h1>
+    {{ else if eq .Section "matematika" }}
+      <h1>Matematika - {{ .Title }}</h1>
+    {{ else if eq .Section "rust" }}
+      <h1>Rust - {{ .Title }}</h1>
+    {{ else }}
+      <h1>{{ .Title }}</h1>
+    {{ end }}
+    {{ if .Params.author }}
+      <h4>By {{ .Params.author }}</h4>
+    {{ end }}
+    {{ .Content }}
+  </main>
 {{ end }}

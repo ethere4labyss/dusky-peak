@@ -8,3 +8,18 @@
   width: 100%;
   max-width: 144rem;
 }
+
+.blog-wrapper {
+  display: flex;
+  gap: 4.8rem;
+  width: 100%;
+
+  .page-aside {
+    width: 100%;
+    max-width: 24rem;
+
+    &__title {
+      margin-bottom: 0.6rem;
+    }
+  }
+}
