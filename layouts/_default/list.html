@@ -1,6 +1,7 @@
 {{ define "main" }}
   <main>
     <h1>{{ .Title }}</h1>
+    {{ .Description }}
     <ul>
       {{ range $index, $page := .Pages }}
         <li><a href="{{ .Permalink }}">{{ add $index 1 }}. {{ $page.Title }}</a></li>
