@@ -15,7 +15,7 @@
     <ul class="page-navigation__items">
       {{ range .Site.Data.navigation.main }}
         <li class="page-navigation__item{{ if or (eq $.Page.RelPermalink .link) (and (strings.HasPrefix $.Page.RelPermalink .link) (not (eq .link "/"))) }} page-navigation__item--active{{ end }}">
-          <a href="{{ .link }}">{{ .name }}</a>
+          <a class="page-navigation__link" href="{{ .link }}">{{ .name }}</a>
         </li>
       {{ end }}
     </ul>

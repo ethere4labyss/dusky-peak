@@ -1,0 +1,50 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #164e82 #bdbdbd;
+
+  @media (prefers-color-scheme: dark) {
+    scrollbar-color: #164e82 #2e3234;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #bdbdbd;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #2e3234;
+  }
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #a4a4a4;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #393d40;
+  }
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #8b8b8b;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #44494c;
+  }
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #164e82;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #1d69af;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #227bce;
+}

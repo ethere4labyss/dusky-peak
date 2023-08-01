@@ -68,8 +68,15 @@
     width: 100%;
     margin-left: auto;
     font-size: 1.4rem;
-    background-color: #f9f9f9;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $dark-component-background;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: $component-border;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $dark-component-background;
+      border-top-color: $dark-component-border;
+    }
 
     @include sm {
       position: unset;
@@ -84,8 +91,27 @@
   }
 
   &__item {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $component-border;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $dark-component-background;
+      border-bottom-color: $dark-component-border;
+    }
+
+    &--active a {
+      opacity: 1;
+    }
+
+    @include sm {
+      border-bottom: unset;
+    }
+  }
+
+  &__link {
+    display: block;
     padding: 1.2rem 2.4rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     opacity: 0.6;
     transition: opacity 0.2s;
 
@@ -93,13 +119,8 @@
       opacity: 1;
     }
 
-    &--active {
-      opacity: 1;
-    }
-
     @include sm {
       padding: unset;
-      border-bottom: unset;
     }
   }
 }
