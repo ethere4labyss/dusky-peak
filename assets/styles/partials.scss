@@ -1,9 +1,22 @@
 @import 'breakpoints';
+@import 'colors';
+
+.page-navigation,
+.page-aside,
+.page-footer {
+  background-color: $component-background;
+  border-color: $component-border;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-component-background;
+    border-color: $dark-component-border;
+  }
+}
 
 .page-navigation {
   margin-bottom: 2.4rem;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 
   .content-wrapper {
     position: relative;
@@ -93,8 +106,8 @@
 
 .page-aside {
   height: max-content;
-  background-color: #f9f9f9;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-style: solid;
   border-radius: 0.4rem;
 
   &__content {
@@ -105,7 +118,13 @@
     margin-bottom: 0;
     padding: 1.2rem 1.8rem;
     font-size: 1.6rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;;
+    border-color: $component-border;
+
+    @media (prefers-color-scheme: dark) {
+      border-color: $dark-component-border;
+    }
   }
 
   #TableOfContents { padding-left: 3.2rem }
@@ -113,9 +132,9 @@
 
 .page-footer {
   padding: 2.4rem 0;
-  background-color: #f9f9f9;
   font-size: 1.3rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-width: 1px;
+  border-top-style: solid;
 
   @include sm {
     padding: 0.8rem 0;

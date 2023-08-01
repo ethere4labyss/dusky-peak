@@ -22,6 +22,11 @@ body {
   min-height: 100vh;
   font-size: 1.5rem;
   font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-page-background;
+    color: $dark-text-color;
+  }
 }
 
 .blog-wrapper main {
