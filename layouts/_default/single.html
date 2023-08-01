@@ -18,6 +18,7 @@
       {{ range $index, $page := $section.RegularPagesRecursive }}
         <li><a href="{{ $page.Permalink }}">{{ add $index 1 }}. {{ $page.Title }}</a></li>
       {{ end }}
+      {{ .TableOfContents }}
     </ul>
   </aside>
   <main>

@@ -6,3 +6,9 @@ title = 'Dusky Peak'
 titlePrefix = "Dusky Peak | "
 copyright = "Copyright © 2023 Dusky Peak"
 maintainer = "ethere4labyss"
+
+[markup]
+[markup.tableOfContents]
+endLevel = 2
+ordered = false
+startLevel = 1
