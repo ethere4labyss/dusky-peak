@@ -110,6 +110,11 @@
   border-style: solid;
   border-radius: 0.4rem;
 
+  @include md {
+    position: sticky;
+    top: 2.4rem;
+  }
+
   &__content {
     padding: 1.6rem 2.4rem;
   }

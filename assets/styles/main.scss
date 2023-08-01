@@ -50,6 +50,39 @@ body {
   ul { list-style: disc }
   ol { list-style: decimal }
 
+  a {
+    color: $link-color;
+    text-decoration: underline;
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-link-color;
+    }
+  }
+
+  li > a {
+    color: unset;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    margin: 4.8rem auto;
+    width: 100%;
+    max-width: 54rem;
+  }
+
+  code {
+    padding: 0 0.4rem;
+    background-color: $code-background;
+    color: $code-color;
+    border-radius: 0.4rem;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $dark-code-background;
+      color: $dark-code-color;
+    }
+  }
+
   .author {
     font-size: 1.6rem;
   }
